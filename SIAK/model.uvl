@@ -1,0 +1,7 @@
+namespace SIAK
+
+features
+	SIAK {abstract true}
+		optional
+			Base
+

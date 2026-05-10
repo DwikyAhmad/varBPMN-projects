@@ -1,0 +1,14 @@
+namespace Koperasi
+
+features
+	Koperasi {abstract true}
+		mandatory
+			Simpanan {abstract true}
+				alternative
+					"Simpanan Sukarela"
+					"Simpanan Pokok"
+			Transaksi {abstract true}
+				alternative
+					CatatTransaksiFirst
+					UpdateSaldoFirst
+
