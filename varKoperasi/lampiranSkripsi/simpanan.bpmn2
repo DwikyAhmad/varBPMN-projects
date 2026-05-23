@@ -3,40 +3,89 @@
 <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ext="http://org.eclipse.bpmn2/ext" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="_bCoTcAo0EfGv3ZY7ytEv0A" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.5.4.RC1-v20220528-0836-B1">
   <bpmn2:process id="Process_1" name="Process 1" isExecutable="false">
     <bpmn2:startEvent id="StartEvent_1" name="Start">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
       <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
     </bpmn2:startEvent>
     <bpmn2:userTask id="Task_2" name="Masuk ke Penyetoran Simpanan">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
     </bpmn2:userTask>
-    <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="StartEvent_1" targetRef="Task_2"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="StartEvent_1" targetRef="Task_2">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
     <bpmn2:userTask id="Task_3" name="Memilih Jenis Simpanan">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_9</bpmn2:outgoing>
     </bpmn2:userTask>
-    <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="Task_2" targetRef="Task_3"/>
-    <bpmn2:sequenceFlow id="SequenceFlow_5" name="Simpanan Pokok / Wajib" sourceRef="ExclusiveGateway_1" targetRef="ExclusiveGateway_3"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="Task_2" targetRef="Task_3">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_5" name="Simpanan Pokok / Wajib" sourceRef="ExclusiveGateway_1" targetRef="ExclusiveGateway_3">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
     <bpmn2:userTask id="Task_5" name="Masukkan Nominal">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_7</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_1</bpmn2:outgoing>
     </bpmn2:userTask>
-    <bpmn2:sequenceFlow id="SequenceFlow_7" name="Simpanan Sukarela" sourceRef="ExclusiveGateway_1" targetRef="Task_5"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_7" name="Simpanan Sukarela" sourceRef="ExclusiveGateway_1" targetRef="Task_5">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
     <bpmn2:exclusiveGateway id="ExclusiveGateway_1" name="Exclusive Gateway 1" gatewayDirection="Diverging">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_9</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
       <bpmn2:outgoing>SequenceFlow_7</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
-    <bpmn2:sequenceFlow id="SequenceFlow_9" sourceRef="Task_3" targetRef="ExclusiveGateway_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_9" sourceRef="Task_3" targetRef="ExclusiveGateway_1">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
     <bpmn2:endEvent id="EndEvent_4" name="End Event 1">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_6</bpmn2:incoming>
     </bpmn2:endEvent>
     <bpmn2:exclusiveGateway id="ExclusiveGateway_3" name="Exclusive Gateway 3" gatewayDirection="Converging">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_5</bpmn2:incoming>
       <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_6</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
-    <bpmn2:sequenceFlow id="SequenceFlow_1" sourceRef="Task_5" targetRef="ExclusiveGateway_3"/>
-    <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="ExclusiveGateway_3" targetRef="EndEvent_4"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_1" sourceRef="Task_5" targetRef="ExclusiveGateway_3">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="ExclusiveGateway_3" targetRef="EndEvent_4">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#000000" ext:shapeBackground="#ffffff" ext:labelForeground="#000000"/>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
   </bpmn2:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_Process_1" bpmnElement="Process_1">

@@ -1,0 +1,86 @@
+{
+    "feature": "DailyLimit",
+    "targetBPMN": "transfer.bpmn2",
+    "priority": 2,
+    "mappings": [
+        {
+            "id": "InclusiveGateway_1",
+            "name": "Inclusive Gateway 1",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "ScriptTask_11",
+            "name": "init int accumulate as withdraw + finalAmount",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "ScriptTask_19",
+            "name": "init int accumulate as withdraw + 1",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "InclusiveGateway_2",
+            "name": "Inclusive Gateway 2",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "ExclusiveGateway_4",
+            "name": "Exclusive Gateway 5",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "ScriptTask_5",
+            "name": "add message \"above daily limit\" to res",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "ScriptTask_6",
+            "name": "put status \"FAIL\" to res",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "ParallelGateway_1",
+            "name": "Parallel Gateway 1",
+            "connector": {
+                "name": "1",
+                "select": "InclusiveGateway_1"
+            }
+        },
+        {
+            "id": "InclusiveGateway_1",
+            "name": "Inclusive Gateway 1",
+            "receiver": ["1"]
+        },
+        {
+            "id": "ExclusiveGateway_4",
+            "name": "Exclusive Gateway 5",
+            "connector": {
+                "name": "2",
+                "select": "ExclusiveGateway_1"
+            }
+        },
+        {
+            "id": "ExclusiveGateway_1",
+            "name": "Exclusive Gateway 1",
+            "receiver": ["2"],
+            "connector": {
+                "name": "3",
+                "select": "ExclusiveGateway_2"
+            }
+        },
+        {
+            "id": "ExclusiveGateway_2",
+            "name": "Exclusive Gateway 2",
+            "receiver": ["3"],
+            "connector": {
+                "name": "4",
+                "select": "ParallelGateway_2"
+            }
+        },
+        {
+            "id": "ParallelGateway_2",
+            "name": "Parallel Gateway 2",
+            "receiver": ["4"]
+        }
+    ]
+}

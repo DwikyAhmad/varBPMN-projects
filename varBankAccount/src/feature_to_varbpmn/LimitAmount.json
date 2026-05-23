@@ -1,0 +1,12 @@
+{
+    "feature": "LimitAmount",
+    "targetBPMN": "transfer.bpmn2",
+    "priority": 3,
+    "mappings": [
+        {
+            "id": "ScriptTask_19",
+            "name": "init int accumulate as withdraw + 1",
+            "inclusionVariability": "2"
+        }
+    ]
+}

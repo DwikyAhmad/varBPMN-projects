@@ -1,0 +1,51 @@
+{
+    "feature": "OverdraftSelling",
+    "targetBPMN": "transfer.bpmn2",
+    "priority": 4,
+    "mappings": [
+        {
+            "id": "ParallelGateway_1",
+            "name": "Parallel Gateway 1",
+            "connector": {
+                "name": "1",
+                "select": "ExclusiveGateway_1"
+            }
+        },
+        {
+            "id": "ExclusiveGateway_1",
+            "name": "Exclusive Gateway 1",
+            "receiver": ["1"],
+            "connector": {
+                "name": "2",
+                "select": "InclusiveGateway_1"
+            }
+        },
+        {
+            "id": "InclusiveGateway_1",
+            "name": "Inclusive Gateway 1",
+            "receiver": ["2"]
+        },
+        {
+            "id": "ExclusiveGateway_4",
+            "name": "Exclusive Gateway 5",
+            "connector": {
+                "name": "3",
+                "select": "ExclusiveGateway_2"
+            }
+        },
+        {
+            "id": "ExclusiveGateway_2",
+            "name": "Exclusive Gateway 2",
+            "receiver": ["3"],
+            "connector": {
+                "name": "4",
+                "select": "ParallelGateway_2"
+            }
+        },
+        {
+            "id": "ParallelGateway_2",
+            "name": "Parallel Gateway 2",
+            "receiver": ["4"]
+        }
+    ]
+}
