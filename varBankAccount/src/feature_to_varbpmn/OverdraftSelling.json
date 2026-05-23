@@ -26,26 +26,34 @@
             "receiver": ["2"]
         },
         {
-            "id": "ExclusiveGateway_4",
-            "name": "Exclusive Gateway 5",
+            "id": "ExclusiveGateway_2",
+            "name": "Exclusive Gateway 2",
             "connector": {
                 "name": "3",
-                "select": "ExclusiveGateway_2"
+                "select": "ExclusiveGateway_18"
             }
         },
         {
-            "id": "ExclusiveGateway_2",
-            "name": "Exclusive Gateway 2",
-            "receiver": ["3"],
+            "id": "ExclusiveGateway_4",
+            "name": "Exclusive Gateway 4",
             "connector": {
                 "name": "4",
+                "select": "ExclusiveGateway_18"
+            }
+        },
+        {
+            "id": "ExclusiveGateway_18",
+            "name": "Exclusive Gateway 18",
+            "receiver": ["3", "4"],
+            "connector": {
+                "name": "5",
                 "select": "ParallelGateway_2"
             }
         },
         {
             "id": "ParallelGateway_2",
             "name": "Parallel Gateway 2",
-            "receiver": ["4"]
+            "receiver": ["5"]
         }
     ]
 }
