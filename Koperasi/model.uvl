@@ -5,10 +5,10 @@ features
 		mandatory
 			Simpanan {abstract true}
 				alternative
-					"Simpanan Sukarela"
-					"Simpanan Pokok"
+					Sukarela
+					Pokok
 			Transaksi {abstract true}
 				alternative
-					CatatTransaksiFirst
-					UpdateSaldoFirst
+					PrioritasAset
+					PrioritasAudit
 

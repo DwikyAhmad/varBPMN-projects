@@ -71,6 +71,7 @@
         {
             "id": "ExclusiveGateway_18",
             "name": "Exclusive Gateway 18",
+            "inclusionVariability": "1",
             "connector": {
                 "name": "5",
                 "select": "ExclusiveGateway_2"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="Koperasi"/>
+	<feature automatic="selected" name="Simpanan"/>
+	<feature automatic="unselected" name="Sukarela"/>
+	<feature manual="selected" name="Pokok"/>
+	<feature automatic="selected" name="Transaksi"/>
+	<feature manual="selected" name="PrioritasAset"/>
+	<feature automatic="unselected" name="PrioritasAudit"/>
+</configuration>

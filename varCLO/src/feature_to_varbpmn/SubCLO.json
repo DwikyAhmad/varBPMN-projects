@@ -1,0 +1,22 @@
+{
+    "feature": "SubCLO",
+    "targetBPMN": "CLO.bpmn2",
+    "priority": 2,
+    "mappings": [
+        {
+            "id": "SequenceFlow_7",
+            "name": "NO",
+            "inclusionVariability": "2"
+        },
+        {
+            "id": "UserTask_1",
+            "name": "CRUD Sub-CLO",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "UserTask_2",
+            "name": "Map Sub-CLO to CLO",
+            "inclusionVariability": "1"
+        }
+    ]
+}

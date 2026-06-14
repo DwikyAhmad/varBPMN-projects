@@ -1,0 +1,17 @@
+{
+    "feature": "Pokok",
+    "targetBPMN": "simpanan.bpmn2",
+    "priority": 1,
+    "mappings": [
+        {
+            "id": "Task_3",
+            "name": "Memilih Jenis Simpanan",
+            "inclusionVariability": "3"
+        },
+        {
+            "id": "Task_5",
+            "name": "Masukkan Nominal",
+            "inclusionVariability": "3"
+        }
+    ]
+}

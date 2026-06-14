@@ -1,7 +1,8 @@
 /*
 !/.gitignore
-!/SIAK
 !/Koperasi
 !/varKoperasi
-!/varSIAK
 !/varBankAccount
+!/BankAccount
+!/CLO
+!/varCLO

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="BankAccount"/>
+	<feature name="Overdraft"/>
+	<feature name="OverdraftSelling"/>
+	<feature name="Interest"/>
+	<feature name="InterestEstimation"/>
+	<feature name="CreditWorthiness"/>
+	<feature automatic="selected" manual="selected" name="DailyLimit"/>
+	<feature automatic="unselected" name="LimitAmount"/>
+	<feature manual="selected" name="LimitFrequency"/>
+</configuration>

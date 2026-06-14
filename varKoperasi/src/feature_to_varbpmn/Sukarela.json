@@ -1,0 +1,17 @@
+{
+    "feature": "Sukarela",
+    "targetBPMN": "simpanan.bpmn2",
+    "priority": 1,
+    "mappings": [
+        {
+            "id": "Task_3",
+            "name": "Memilih Jenis Simpanan",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "Task_5",
+            "name": "Masukkan Nominal",
+            "inclusionVariability": "1"
+        }
+    ]
+}
