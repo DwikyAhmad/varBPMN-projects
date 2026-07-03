@@ -1,0 +1,102 @@
+{
+    "CheckLimitFirst": [
+        {
+            "id": "ParallelGateway_1",
+            "name": "Parallel Gateway 1",
+            "connector": {
+                "name": 0,
+                "select": "ScriptTask_3"
+            }
+        },
+        {
+            "id": "ScriptTask_2",
+            "name": "Check Saldo",
+            "receiver": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "id": "ScriptTask_3",
+            "name": "Check limit harian",
+            "receiver": [
+                "0",
+                "2"
+            ]
+        },
+        {
+            "id": "ParallelGateway_2",
+            "name": "Parallel Gateway 2",
+            "receiver": [
+                "1",
+                "2"
+            ]
+        },
+        {
+            "id": "ExclusiveGateway_2",
+            "name": "cukup?",
+            "connector": {
+                "name": "1",
+                "select": "ParallelGateway_2"
+            }
+        },
+        {
+            "id": "ExclusiveGateway_3",
+            "name": "lebih?",
+            "connector": {
+                "name": "2",
+                "select": "ScriptTask_2"
+            }
+        }
+    ],
+    "CheckBalanceFirst": [
+        {
+            "id": "ParallelGateway_1",
+            "name": "Parallel Gateway 1",
+            "connector": {
+                "name": 0,
+                "select": "ScriptTask_2"
+            }
+        },
+        {
+            "id": "ScriptTask_2",
+            "name": "Check Saldo",
+            "receiver": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "id": "ScriptTask_3",
+            "name": "Check limit harian",
+            "receiver": [
+                "0",
+                "2"
+            ]
+        },
+        {
+            "id": "ParallelGateway_2",
+            "name": "Parallel Gateway 2",
+            "receiver": [
+                "1",
+                "2"
+            ]
+        },
+        {
+            "id": "ExclusiveGateway_2",
+            "name": "cukup?",
+            "connector": {
+                "name": "1",
+                "select": "ScriptTask_3"
+            }
+        },
+        {
+            "id": "ExclusiveGateway_3",
+            "name": "lebih?",
+            "connector": {
+                "name": "2",
+                "select": "ParallelGateway_2"
+            }
+        }
+    ]
+}

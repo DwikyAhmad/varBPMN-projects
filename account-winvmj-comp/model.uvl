@@ -1,0 +1,7 @@
+namespace accountwinvmjcomp
+
+features
+	accountwinvmjcomp {abstract true}
+		optional
+			Base
+
