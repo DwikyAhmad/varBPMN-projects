@@ -1,7 +1,7 @@
-namespace accountwinvmjcomp
+namespace Accountwinvmjcomp
 
 features
-	accountwinvmjcomp {abstract true}
+	Accountwinvmjcomp
 		optional
-			Base
+			MyBank
 

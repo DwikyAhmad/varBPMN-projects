@@ -49,7 +49,7 @@
         {
             "id": "InclusiveGateway_1",
             "name": "Inclusive Gateway 1",
-            "receiver": ["1"]
+            "receiver": ["1", "4", "5"]
         },
         {
             "id": "ExclusiveGateway_4",
@@ -62,9 +62,9 @@
         {
             "id": "ExclusiveGateway_1",
             "name": "Exclusive Gateway 1",
-            "receiver": ["2"],
+            "receiver": ["1", "2"],
             "connector": {
-                "name": "3",
+                "name": "4",
                 "select": "ExclusiveGateway_2"
             }
         },
@@ -73,23 +73,23 @@
             "name": "Exclusive Gateway 18",
             "inclusionVariability": "1",
             "connector": {
-                "name": "5",
-                "select": "ExclusiveGateway_2"
+                "name": "3",
+                "select": "ExclusiveGateway_3"
             }
         },
         {
             "id": "ExclusiveGateway_2",
             "name": "Exclusive Gateway 2",
-            "receiver": ["3", "5"],
+            "receiver": ["4"],
             "connector": {
-                "name": "4",
-                "select": "ParallelGateway_2"
+                "name": "5",
+                "select": "ExclusiveGateway_3"
             }
         },
         {
-            "id": "ParallelGateway_2",
-            "name": "Parallel Gateway 2",
-            "receiver": ["4"]
+            "id": "ExclusiveGateway_3",
+            "name": "Exclusive Gateway 3",
+            "receiver": ["3", "5"]
         }
     ]
 }

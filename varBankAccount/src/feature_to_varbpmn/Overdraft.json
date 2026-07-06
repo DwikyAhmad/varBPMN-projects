@@ -1,0 +1,32 @@
+{
+    "feature": "Overdraft",
+    "targetBPMN": "transfer.bpmn2",
+    "priority": 5,
+    "mappings": [
+        {
+            "id": "ScriptTask_20",
+            "name": "add finalAmount to debt",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "ScriptTask_21",
+            "name": "minus finalBalance from debt",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "ScriptTask_22",
+            "name": "add debt to balance",
+            "inclusionVariability": "1"
+        },
+        {
+            "id": "ScriptTask_3",
+            "name": "add message \"uang kurang\" to res",
+            "inclusionVariability": "2"
+        },
+        {
+            "id": "ScriptTask_4",
+            "name": "put status \"FAIL\" to res",
+            "inclusionVariability": "2"
+        }
+    ]
+}

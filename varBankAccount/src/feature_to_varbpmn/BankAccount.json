@@ -44,6 +44,21 @@
             "inclusionVariability": "2"
         },
         {
+            "id": "ScriptTask_20",
+            "name": "add finalAmount to debt",
+            "inclusionVariability": "2"
+        },
+        {
+            "id": "ScriptTask_21",
+            "name": "minus finalBalance from debt",
+            "inclusionVariability": "2"
+        },
+        {
+            "id": "ScriptTask_22",
+            "name": "add debt to balance",
+            "inclusionVariability": "2"
+        },
+        {
             "id": "ParallelGateway_1",
             "name": "Parallel Gateway 1",
             "connector": {
@@ -54,25 +69,25 @@
         {
             "id": "ExclusiveGateway_1",
             "name": "Exclusive Gateway 1",
-            "receiver": ["1"],
+            "receiver": ["1", "2"],
             "connector": {
-                "name": "2",
+                "name": "4",
                 "select": "ExclusiveGateway_2"
             }
         },
         {
             "id": "ExclusiveGateway_2",
             "name": "Exclusive Gateway 2",
-            "receiver": ["2"],
+            "receiver": ["4"],
             "connector": {
-                "name": "3",
-                "select": "ParallelGateway_2"
+                "name": "5",
+                "select": "ExclusiveGateway_3"
             }
         },
         {
-            "id": "ParallelGateway_2",
-            "name": "Parallel Gateway 2",
-            "receiver": ["3"]
+            "id": "ExclusiveGateway_3",
+            "name": "Exclusive Gateway 3",
+            "receiver": ["3", "5"]
         }
     ]
 }

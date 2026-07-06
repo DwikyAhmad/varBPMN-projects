@@ -19,7 +19,6 @@ public class AccountImpl extends AccountDecorator {
 
 	protected int dailyLimit;
 	protected int withdraw;
-	protected int debt;
 	public AccountImpl() {
         super();
 		this.id_account = UUID.randomUUID();
@@ -30,7 +29,6 @@ public class AccountImpl extends AccountDecorator {
 		super(record, AccountImpl.class.getName());
 		this.dailyLimit = dailyLimit;
 		this.withdraw = withdraw;
-		this.debt = 0;
 		this.objectName = AccountImpl.class.getName();
 	}
 
@@ -47,14 +45,6 @@ public class AccountImpl extends AccountDecorator {
 
 	public void setWithdraw(int withdraw) {
 		this.withdraw = withdraw;
-	}
-
-	public int getDebt() {
-		return this.debt;
-	}
-
-	public void setDebt(int debt) {
-		this.debt = debt;
 	}
 
 	public boolean update(int x) {
