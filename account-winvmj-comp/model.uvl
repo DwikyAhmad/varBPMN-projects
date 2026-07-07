@@ -1,7 +1,0 @@
-namespace Accountwinvmjcomp
-
-features
-	Accountwinvmjcomp
-		optional
-			MyBank
-
