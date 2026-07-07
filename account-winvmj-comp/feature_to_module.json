@@ -1,8 +1,0 @@
-{
-	"Accountwinvmjcomp": [
-		"accountpl.account.core"
-	],
-	"DailyLimit": [
-		"accountpl.account.dailylimit"
-	]
-}
