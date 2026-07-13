@@ -1,1 +1,11 @@
-{}
+{
+	"BankAccount": [
+		"accountpl.account.core"
+	],
+	"DailyLimit": [
+		"accountpl.account.dailylimit"
+	],
+	"Loan": [
+		"accountpl.account.dailylimit"
+	]
+}

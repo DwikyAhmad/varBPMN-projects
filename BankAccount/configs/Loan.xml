@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="BankAccount"/>
+	<feature manual="selected" name="Loan"/>
+	<feature name="LoanSelling"/>
+	<feature name="Interest"/>
+	<feature name="InterestEstimation"/>
+	<feature name="CreditWorthiness"/>
+	<feature automatic="selected" manual="selected" name="DailyLimit"/>
+	<feature manual="selected" name="LimitAmount"/>
+	<feature automatic="unselected" name="LimitFrequency"/>
+</configuration>

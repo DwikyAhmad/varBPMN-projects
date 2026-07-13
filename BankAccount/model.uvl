@@ -3,9 +3,9 @@ namespace BankAccount
 features
 	BankAccount
 		optional
-			Overdraft
+			Loan
 				optional
-					OverdraftSelling
+					LoanSelling
 			Interest
 				optional
 					InterestEstimation
@@ -16,4 +16,4 @@ features
 					LimitFrequency
 
 constraints
-	OverdraftSelling => DailyLimit
+	LoanSelling => DailyLimit
